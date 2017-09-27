@@ -135,7 +135,7 @@ kube-system   weave-net-s4xw9                        2/2       Running   0      
 docker ps
 ```
 
-Output:
+Output (master):
 ```
 CONTAINER ID        IMAGE                                                                                                                            COMMAND                  CREATED             STATUS              PORTS               NAMES
 cdfbe1676f29        weaveworks/weave-npc@sha256:676b3a815e2cb2477e6d4ed3c6699c3d3a9c23e30b8f5e76af8e5c0b5030d525                                     "/usr/bin/weave-npc"     3 hours ago         Up 3 hours                              k8s_weave-npc_weave-net-7s0dd_kube-system_875f7534-a35a-11e7-9972-02d7c130505a_2
@@ -157,11 +157,21 @@ ddc573f0b3f7        gcr.io/google_containers/pause-amd64:3.0                    
 7be06c039695        gcr.io/google_containers/pause-amd64:3.0                                                                                         "/pause"                 3 hours ago         Up 3 hours                              k8s_POD_etcd-kube1-master_kube-system_9ef6d25e21bb4befeabe4d0e4f72d1ca_2
 ```
 
+Output (worker):
+```
+CONTAINER ID        IMAGE                                                                                                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+02be7f6676a6        weaveworks/weave-npc@sha256:676b3a815e2cb2477e6d4ed3c6699c3d3a9c23e30b8f5e76af8e5c0b5030d525                        "/usr/bin/weave-npc"     2 hours ago         Up 2 hours                              k8s_weave-npc_weave-net-s4xw9_kube-system_85d8c4de-a375-11e7-ac1a-02d7c130505a_0
+caabefc78ac0        weaveworks/weave-kube@sha256:cddb2620620481271763d39c797b2f0b970d18bc5e98ffb7151a3c5f8a923324                       "/home/weave/launch.s"   2 hours ago         Up 2 hours                              k8s_weave_weave-net-s4xw9_kube-system_85d8c4de-a375-11e7-ac1a-02d7c130505a_0
+e6f321fc8ad7        gcr.io/google_containers/kube-proxy-amd64@sha256:1509f2fc8a60501d604d21d983ed6f5d0ea40ccdd7cc6ba6c994389ef7db16d8   "/usr/local/bin/kube-"   2 hours ago         Up 2 hours                              k8s_kube-proxy_kube-proxy-vq2x3_kube-system_85d8bbdc-a375-11e7-ac1a-02d7c130505a_0
+b0126f4f5a13        gcr.io/google_containers/pause-amd64:3.0                                                                            "/pause"                 2 hours ago         Up 2 hours                              k8s_POD_weave-net-s4xw9_kube-system_85d8c4de-a375-11e7-ac1a-02d7c130505a_0
+32b24e259877        gcr.io/google_containers/pause-amd64:3.0                                                                            "/pause"                 2 hours ago         Up 2 hours                              k8s_POD_kube-proxy-vq2x3_kube-system_85d8bbdc-a375-11e7-ac1a-02d7c130505a_0
+```
+
 ```
 docker images
 ```
 
-Output:
+Output (master and workers):
 ```
 REPOSITORY                                               TAG                 IMAGE ID            CREATED             SIZE
 gcr.io/google_containers/kube-controller-manager-amd64   v1.7.6              028bd65dc783        13 days ago         138 MB
