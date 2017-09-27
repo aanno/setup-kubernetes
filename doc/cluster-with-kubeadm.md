@@ -65,6 +65,24 @@ as root:
 
 1. Obviously, it is recommended to follow the instructions printed out.
 
+### Setup the pod networks (once, on the master)
+
+I used 'weaver net' and installed it with
+
+```
+export kubever=$(kubectl version | base64 | tr -d '\n')
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+```
+
+### Enable kubelet daemon permanently
+
+Enable the kubelet daemon with `systemctl enable kubelet`.
+
+### How to test the kubelet daemon
+
+To test if kubelet is working, you could use `systemctl status kubelet` and 
+`kubelet`.
+
 ## Setup the worker nodes
 
 ```
@@ -92,6 +110,15 @@ Node join complete:
 
 Run 'kubectl get nodes' on the master to see this machine join.
 ```
+
+### Enable kubelet daemon permanently
+
+Enable the kubelet daemon with `systemctl enable kubelet`.
+
+### How to test the kubelet daemon
+
+To test if kubelet is working, you could use `systemctl status kubelet` and 
+`kubelet`.
 
 ## Important status checking commands
 

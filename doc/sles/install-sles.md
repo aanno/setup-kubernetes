@@ -79,10 +79,6 @@ on this use case.
    with yast2.
 4. Add the packages `kubeadm`, `kubectl`, `kubelet`, and `kubernetes-cni` with yast2 
    or zypper.
-5. Enable the kubelet daemon with `systemctl start kubelet` and 
-   `systemctl enable kubelet`.
-6. To test if docker is working, you could use `systemctl status kubelet` and 
-   `kubelet`.
    
 ## Follow the cluster setup at `doc/cluster-with-kubeadm.md`
 
