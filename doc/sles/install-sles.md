@@ -53,7 +53,7 @@
    using this packages in our setup.
 6. A detailed docker installation guide for Suse is at 
    https://www.suse.com/documentation/sles-12/singlehtml/book_sles_docker/book_sles_docker.html
-   + An very imported part of the docker setup is the 'docker storage driver'.
+   + An very important part of the docker setup is the 'docker storage driver'.
      The guide shows alternatives to using btrfs.
 7. Enable the docker daemon with `systemctl start docker` and 
    `systemctl enable docker`.
@@ -79,6 +79,10 @@ on this use case.
    with yast2.
 4. Add the packages `kubeadm`, `kubectl`, `kubelet`, and `kubernetes-cni` with yast2 
    or zypper.
+5. Enable the kubelet daemon with `systemctl start kubelet` and 
+   `systemctl enable kubelet`.
+6. To test if docker is working, you could use `systemctl status kubelet` and 
+   `kubelet`.
    
 ## Follow the cluster setup at `doc/cluster-with-kubeadm.md`
 
