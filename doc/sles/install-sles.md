@@ -28,7 +28,7 @@
   
 ## SLES registration (optional)
 
-1. As developer you could register the SLES instance for free (for evaluation). 
+1. As developer, you could register the SLES instance for free (for evaluation). 
    Just create an account at 
    https://www.suse.com/de-de/subscriptions/sles/developer/ .
 2. You can manage your registrations at the Suse Customer Center at 
@@ -45,12 +45,51 @@
 1. For installing docker, you could use the 'Container Module' (see above).
 2. As an alternative, you could use the OpenSuse Repo at
    http://download.opensuse.org/repositories/Virtualization:/containers/SLE_12_SP2
-3. If you have trouble with package signing validation, you could find out the URL
-   of the public key in the *.repo file at the given location, download it 
+3. If you have trouble with package signing validation, you could find out the 
+   URL of the public key in the *.repo file at the given location, download it 
    and import it with `rpm --import <gpg-pub-file>`.
 4. Install docker with yast2 or `zypper install docker`.
-5. The OpenSuse Repo also contain kubernetes-* packages, but we are _not_ using this
-   packages our setup.
+5. The OpenSuse Repo also contains kubernetes-* packages, but we are _not_ 
+   using this packages in our setup.
+6. A detailed docker installation guide for Suse is at 
+   https://www.suse.com/documentation/sles-12/singlehtml/book_sles_docker/book_sles_docker.html
+   + An very imported part of the docker setup is the 'docker storage driver'.
+     The guide shows alternatives to using btrfs.
+7. Enable the docker daemon with `systemctl start docker` and 
+   `systemctl enable docker`.
+8. To test if docker is working, you could use `systemctl status docker` and 
+   `docker info`.
    
+## Install some kubernetes packages
+
+AFAIK, there are _no_ official kubernetes packages with SLES 12, as Suse tries 
+to sell its CAAS platform (https://www.suse.com/de-de/products/caas-platform/) 
+on this use case.
+
+1. We use the packages from the Google Cloud Platform for (Redhat) EL7 
+   (!). Details at https://github.com/GoogleCloudPlatform/compute-image-packages
+2. Install package keys:
+   ```
+   wget https://packages.cloud.google.com/yum/doc/yum-key.gpg
+   wget https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   rpm --import rpm-package-key.gpg
+   rpm --import yum-key.gpg
+   ```
+3. Add repository URL `https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64` 
+   with yast2.
+4. Add the packages `kubeadm`, `kubectl`, `kubelet`, and `kubernetes-cni` with yast2 
+   or zypper.
    
+## Follow the cluster setup at `doc/cluster-with-kubeadm.md`
+
+The last steps for setting up a kubernetes cluster are independent of the linux 
+distribution and documented at `doc/cluster-with-kubeadm.md`.
+
+# Appendix
+
+## Left-offs and not tried
+
+* https://software.opensuse.org/download.html?project=Virtualization%3Acontainers&package=kubernetes
+  points you to an yum receipte that includes the OpenSuse Repo mentioned.
+
    
