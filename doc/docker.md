@@ -66,3 +66,8 @@ an additional benefit.
 * https://github.com/firewalld/firewalld/issues/195
 
 The issue is *unresolved*.
+
+## ipv6
+
+* https://www.puzzle.ch/blog/articles/2017/06/13/docker-container-mit-ipv6-anbinden
+* https://docs.docker.com/engine/userguide/networking/default_network/ipv6/
