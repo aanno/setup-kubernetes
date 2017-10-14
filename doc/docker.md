@@ -17,6 +17,18 @@ If you use docker for anything apart for playing around for half-an-hour
 you *need* an _storage driver_. You normally want the device mapper
 (direct-lvm) driver, but see below.
 
+* https://docs.docker.com/engine/userguide/storagedriver/selectadriver/
+* https://integratedcode.us/2016/08/30/storage-drivers-in-docker-a-deep-dive/
+  (recommends overlay2)
+* https://developers.redhat.com/blog/2016/10/25/docker-project-can-you-have-overlay2-speed-and-density-with-devicemapper-yep/
+  (recommends dm **with special setup**, and shows its improvements in benchmarks)
+* https://github.com/chriskuehl/docker-storage-benchmark (benchmarks)
+
+### Zfs
+
+* https://www.golem.de/news/zfs-ausprobiert-ein-dateisystem-fuers-rechenzentrum-im-privaten-einsatz-1710-129252.html
+* https://github.com/zfsonlinux/zfs/wiki/Fedora
+
 ### btrfs
 
 <div class="alert alert-success">
