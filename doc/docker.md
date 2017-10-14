@@ -22,6 +22,8 @@ you *need* an _storage driver_. You normally want the device mapper
   (recommends overlay2)
 * https://developers.redhat.com/blog/2016/10/25/docker-project-can-you-have-overlay2-speed-and-density-with-devicemapper-yep/
   (recommends dm **with special setup**, and shows its improvements in benchmarks)
+  + https://github.com/projectatomic/container-storage-setup
+  + http://www.projectatomic.io/ (https://github.com/projectatomic)
 * https://github.com/chriskuehl/docker-storage-benchmark (benchmarks)
 
 ### Zfs
