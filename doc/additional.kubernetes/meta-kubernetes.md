@@ -11,7 +11,15 @@
 
 * [hypernetes](https://github.com/hyperhq/hypernetes)
 * http://rancher.com/
+  + http://rancher.com/rancher/
+  + http://rancher.com/quick-start/
 * https://coreos.com (quay, tectonic)
+
+# Kubernetes UI
+
+* https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+  Dashboard
+* https://kubernetic.com/
 
 # Build images
 

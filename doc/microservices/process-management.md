@@ -1,3 +1,3 @@
 # Process management
 
-* http://supervisord.org/
+* http://supervisord.org/ (can be used inside a container to start more than one process)
