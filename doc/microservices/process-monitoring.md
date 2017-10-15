@@ -22,3 +22,7 @@
 ## Grafana
 
 * https://grafana.com/
+
+## Sysdig
+
+* https://www.sysdig.org/ (https://github.com/draios/sysdig)
