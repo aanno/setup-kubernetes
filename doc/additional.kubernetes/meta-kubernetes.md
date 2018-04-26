@@ -25,6 +25,7 @@
 * http://manageiq.org/ (https://github.com/ManageIQ/manageiq)
   + http://manageiq.org/docs/get-started/docker
   + https://github.com/ManageIQ/guides
+* https://pharos.sh/
 
 # Kubernetes UI
 
