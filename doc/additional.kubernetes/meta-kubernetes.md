@@ -26,6 +26,12 @@
   + http://manageiq.org/docs/get-started/docker
   + https://github.com/ManageIQ/guides
 * https://pharos.sh/
+* https://fabric8.io/
+  + https://fabric8.io/guide/console.html
+  + https://spring.fabric8.io/
+* https://www.projectatomic.io/docs/quickstart/
+  + http://www.projectatomic.io/docs/gettingstarted/
+  + http://www.projectatomic.io/docs/atomic-host-networking/
 
 # Kubernetes UI
 
