@@ -14,6 +14,18 @@
   + http://devcenter.wercker.com/docs/home
   + http://devcenter.wercker.com/docs/quickstarts/building/java
   + https://github.com/wercker/wercker
+  
+# Kubernetes based stacks
+
+## Knative
+
+* [knative](https://cloud.google.com/knative/)
+
+### Knative building blocks
+
+* [istio](https://www.heise.de/developer/artikel/Istio-Das-Service-Mesh-fuer-verteilte-Systeme-4153426.html)
+  + [envoy](https://www.envoyproxy.io/)
+  + [kiali](https://www.kiali.io/)
 
 # Kubernetes distributions
 
