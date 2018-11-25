@@ -4,6 +4,7 @@
   + https://www.cloudfoundry.org/docs-download/
   + https://bosh.io/docs/
     - http://mariash.github.io/learn-bosh/#introduction
+    - https://banck.net/2017/03/deploying-cloud-foundry-virtualbox-using-bosh-cli-v2/
   + https://www.cloudfoundry.org/container-runtime/
   + https://www.cloudfoundry.org/blog/cloud-foundry-launches-container-runtime-default-container-deployment-method-cloud-foundry-using-kubernetes-bosh/
 * https://kontena.io/
